@@ -1,0 +1,4 @@
+@EndUserText.label: 'BEhaviour Defination For irn'
+define service ZIRN_NEW_BEH {
+  expose zsales_irn_new as Irn_data;
+}

@@ -1,0 +1,4 @@
+define service ZUI_PORTOFLOADING {
+  expose ZC_PORTOFLOADING_S as PortOfLoadingAll;
+  expose ZC_PORTOFLOADING as PortOfLoading;
+}

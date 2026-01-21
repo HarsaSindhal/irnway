@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZSD_INVOICE_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>APP FOR INVOICE IRN SD</DESCRIPTION>
+     <RESPONSIBLE>CB9980000007</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>ALU</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZSD_IRN</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZSD_INVOICE_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZINVOICE_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>YEINV_HTTP</REL_NAME>
+      <REL_TYPE>HTTP</REL_TYPE>
+      <APP_ID>ZSD_INVOICE_EXT</APP_ID>
+      <SRVC_NAME>1B3A155996F55E6A5B75559F4D9C17</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>YEINV_HTTP</TEXT>
+      <TYPE_TEXT>HTTP Service</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>YEINV_HTTP1</REL_NAME>
+      <REL_TYPE>HTTP</REL_TYPE>
+      <APP_ID>ZSD_INVOICE_EXT</APP_ID>
+      <SRVC_NAME>E88AEE8F8CB04B1CBD2B9AA66F7EA0</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>YEINV_HTTP_SERVICE1</TEXT>
+      <TYPE_TEXT>HTTP Service</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZSD_MULTIPLE_IRN</REL_NAME>
+      <REL_TYPE>HTTP</REL_TYPE>
+      <APP_ID>ZSD_INVOICE_EXT</APP_ID>
+      <SRVC_NAME>AE337A6E6B23DE6ED040627C2FB493</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Multi Irn Service</TEXT>
+      <TYPE_TEXT>HTTP Service</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>YINVOICE                           0001</REL_NAME>
+      <REL_TYPE>IWSV</REL_TYPE>
+      <APP_ID>ZSD_INVOICE_EXT</APP_ID>
+      <SRVC_NAME>1A5868CBBE60F9BC22C9E432C62D0D</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Einv data binding</TEXT>
+      <TYPE_TEXT>OData V2</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

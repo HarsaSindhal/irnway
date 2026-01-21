@@ -1,0 +1,20 @@
+unmanaged implementation in class zbp_sales_irn_new123 unique;
+strict ( 2 );
+
+define behavior for zsales_irn_new //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create;
+  update;
+//  delete;
+//  action ( features : instance ) moveToNextPhase result [1] $self;
+  action createTravelByTemplate
+    result [1] $self
+    ;
+   action createEway
+    result [1] $self
+     ;
+}

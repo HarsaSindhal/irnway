@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Create IRN & E-Way Bill"
+  },
+  "ui5AppDetails": {
+    "appId": "zinvoice"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_389F52ED525FB8AE3B019F9ADFBCB4AC8C80B300_TM",
+    "semanticObject": "zinvoice",
+    "action": "display1",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_389F52ED525FB8AE3B019F9ADFBCB4AC8C80B300_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Create IRN & E-Way Bill",
+        "subtitle": "SD Prints"
+      }
+    }
+  ]
+}

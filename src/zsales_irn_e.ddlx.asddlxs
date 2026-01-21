@@ -1,0 +1,20 @@
+@Metadata.layer:#CORE 
+@Search.searchable: true
+annotate view zsales_irn_new
+    with 
+    
+{
+
+ @UI.lineItem: [
+    { position: 5  },
+    { type: #FOR_ACTION, dataAction: 'createEway', isCopyAction: true, label: 'CreateEway 🚛', position: 10  },
+    { type: #FOR_ACTION, dataAction: 'createTravelByTemplate', label: 'Create Irn 🚚', position: 20  }
+  ]
+//   @UI.identification: [
+//    { type: #FOR_ACTION, dataAction: 'Copy', isCopyAction: true, label: 'Copy', position: 10  }
+//  ]
+@UI.selectionField: [{ position: 10 }]
+@Search.defaultSearchElement: true
+  BillingDocument ;
+    
+}

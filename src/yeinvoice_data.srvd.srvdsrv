@@ -1,0 +1,7 @@
+@EndUserText.label: 'YEINVOICE_DATA print cds'
+define service YEINVOICE_DATA {
+  expose YEINVOICE_CDSS  as YEINVOICE_CDS;
+  expose YPLANT_einv     as plant;
+  expose YI_CUSTOMER_TAX as Financeinvoicedata;
+  expose zsales_irn_new  as irN_DATA;
+}

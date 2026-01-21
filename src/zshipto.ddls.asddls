@@ -1,0 +1,78 @@
+@AbapCatalog.sqlViewName: 'YSHIPTO'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'SHIP TO PARTY'
+define view ZSHIPTO as select from I_BillingDocumentPartnerBasic as A
+association [0..*]  to I_Address_2 as B on A.AddressID = B.AddressID 
+association [0..*]  to I_Customer as k on A.Customer = k.Customer 
+
+ {
+ key
+ A.BillingDocument,
+ A.Customer,
+B.AddressID,
+B. AddressObjectType,
+B. CorrespondenceLanguage,
+B. PrfrdCommMediumType,
+B. AddresseeFullName,
+B. PersonGivenName,
+B. PersonFamilyName,
+B. OrganizationName1,
+B. OrganizationName2,
+B. OrganizationName3,
+B. OrganizationName4,
+B. AddressSearchTerm1,
+B. AddressSearchTerm2,
+B. CityNumber,
+B. CityName,
+B. DistrictName,
+B. VillageName,
+B. PostalCode,
+B. CompanyPostalCode,
+B. Street,
+B. StreetName,
+B. StreetAddrNonDeliverableReason,
+B. StreetPrefixName1,
+B. StreetPrefixName2,
+B. StreetSuffixName1,
+B. StreetSuffixName2,
+B. HouseNumber,
+B. HouseNumberSupplementText,
+B. Building,
+B. Floor,
+B. RoomNumber,
+B. Country,
+B. Region,
+B. FormOfAddress,
+B. TaxJurisdiction,
+B. TransportZone,
+B. POBox,
+B. POBoxAddrNonDeliverableReason,
+B. POBoxIsWithoutNumber,
+B. POBoxPostalCode,
+B. POBoxLobbyName,
+B. POBoxDeviatingCityName,
+B. POBoxDeviatingCityCode,
+B. POBoxDeviatingRegion,
+B. POBoxDeviatingCountry,
+B. CareOfName,
+B. DeliveryServiceTypeCode,
+B. DeliveryServiceNumber,
+B. AddressTimeZone,
+B. SecondaryRegion,
+B. SecondaryRegionName,
+B. TertiaryRegion,
+B. TertiaryRegionName,
+B. RegionalStructureCheckStatus,
+B. AddressGroup,
+B. DistrictNumber,
+B. Village,
+B. RegionalStructureGroup,
+B. AddressCreatedByUser,
+B. AddressCreatedOnDateTime,
+B. AddressChangedByUser,
+B. AddressChangedOnDateTime ,
+k.TelephoneNumber1
+}
+where A.PartnerFunction = 'WE' or A.PartnerFunction = 'RE';

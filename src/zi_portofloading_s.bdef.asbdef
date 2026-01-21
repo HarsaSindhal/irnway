@@ -1,0 +1,61 @@
+managed with additional save implementation in class ZBP_I_PORTOFLOADING_S unique;
+strict;
+with draft;
+
+define behavior for ZI_PortOfLoading_S alias PortOfLoadingAll
+draft table ZPORT_LOADIN_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _PortOfLoading { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_PortOfLoading alias PortOfLoading
+persistent table ZPORT_LOADING
+draft table ZPORT_LOADING_D
+etag master LastChangedAt
+lock dependent by _PortOfLoadingAll
+authorization dependent by _PortOfLoadingAll
+
+{
+  field ( mandatory : create )
+   Portcode;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Portcode;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZPORT_LOADING
+  {
+    Portcode = PORTCODE;
+    Discription = DISCRIPTION;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _PortOfLoadingAll { with draft; }
+
+  validation ValidateRecordChanges on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

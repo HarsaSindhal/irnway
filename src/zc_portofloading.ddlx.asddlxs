@@ -1,0 +1,65 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'PortOfLoading', 
+    typeNamePlural: 'PortOfLoadings', 
+    title: {
+      type: #STANDARD, 
+      label: 'PORT OF LOADING', 
+      value: 'Portcode'
+    }
+  }
+}
+annotate view ZC_PortOfLoading with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Portcode'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Portcode'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_PortOfLoading', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'PORT OF LOADING', 
+    position: 1 
+  } ]
+  Portcode;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'Discription'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'Discription'
+  } ]
+  Discription;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  @UI.lineItem: [ {
+    position: 5 
+  } ]
+  LastChangedBy;
+}
